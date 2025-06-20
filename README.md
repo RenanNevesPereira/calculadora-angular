@@ -1,59 +1,78 @@
-# ConceitosBasicos
+📟 Calculadora Angular
+Uma simples calculadora construída com Angular que realiza a operação de soma entre dois números informados pelo usuário. Esta aplicação é ideal para fins educacionais e demonstração de formulários reativos com ngModel.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+🧩 Tecnologias Utilizadas
+Angular
 
-## Development server
+TypeScript
 
-To start a local development server, run:
+HTML e CSS (SCSS)
 
-```bash
+FormsModule (ngModel)
+
+Angular Standalone Components (com imports direto no @Component)
+
+🎯 Funcionalidades
+Inserção de dois números
+
+Cálculo da soma
+
+Exibição do resultado na tela
+
+Exibição condicional do resultado com diretivas *ngIf e @if
+
+🚀 Como executar
+1. Clone o repositório
+bash
+Copiar
+Editar
+git clone https://github.com/seu-usuario/calculadora-angular.git
+cd calculadora-angular
+2. Instale as dependências
+bash
+Copiar
+Editar
+npm install
+3. Execute o projeto
+bash
+Copiar
+Editar
 ng serve
-```
+A aplicação estará disponível em http://localhost:4200.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+🧪 Estrutura do Projeto
+bash
+Copiar
+Editar
+calculadora-angular/
+├── src/
+│   ├── app/
+│   │   └── calculadora/
+│   │       ├── calculadora.component.ts
+│   │       ├── calculadora.component.html
+│   │       └── calculadora.component.scss
+├── angular.json
+├── package.json
+└── README.md
+🧠 Lógica da Aplicação
+O componente CalculadoraComponent mantém três propriedades:
 
-## Code scaffolding
+numero1 — primeiro número digitado
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+numero2 — segundo número digitado
 
-```bash
-ng generate component component-name
-```
+resultado — resultado da soma
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+A função somar() é disparada no submit do formulário e atualiza o resultado.
 
-```bash
-ng generate --help
-```
+ts
+Copiar
+Editar
+somar() {
+  this.resultado = this.numero1 + this.numero2;
+}
+🎨 Interface
+A interface foi criada com HTML simples, utilizando classes CSS para estilização centralizada e responsiva. O resultado da soma é exibido condicionalmente abaixo do botão.
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+📄 Licença
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
